@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.ParseException;
 
-public class TxtParser {
+public class ValueParser {
     private static final DecimalFormat decimalFormat;
     static {
         DecimalFormatSymbols symbols = new DecimalFormatSymbols();

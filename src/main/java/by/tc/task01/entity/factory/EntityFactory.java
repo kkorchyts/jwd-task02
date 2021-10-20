@@ -10,8 +10,8 @@ import by.tc.task01.entity.VacuumCleaner;
 
 import java.util.Arrays;
 
-import static by.tc.task01.entity.factory.TxtParser.parseFloat;
-import static by.tc.task01.entity.factory.TxtParser.parseInteger;
+import static by.tc.task01.entity.factory.ValueParser.parseFloat;
+import static by.tc.task01.entity.factory.ValueParser.parseInteger;
 
 public class EntityFactory {
     private static final EntityFactory instance = new EntityFactory();
