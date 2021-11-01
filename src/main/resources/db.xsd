@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.task01.tc.by"
+        xmlns:tns="http://www.task01.tc.by">
+    <element name="appliances">
+            <complexType>
+                <sequence>
+                    <element name="oven" type= "tns:Oven" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="laptop" type= "tns:Laptop" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="refrigerator" type= "tns:Refrigerator" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="vacuumCleaner" type= "tns:VacuumCleaner" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="tabletPC" type= "tns:TabletPC" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="speakers" type= "tns:Speakers" minOccurs="0" maxOccurs="unbounded"/>
+                </sequence>
+            </complexType>
+    </element>
+
+    <complexType name="Oven">
+        <sequence>
+            <element name="power_consumption" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="weight" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="capacity" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="depth" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="height" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="width" type="string" minOccurs="1" maxOccurs="1"/>
+        </sequence>
+    </complexType>
+
+
+    <complexType name="Laptop">
+        <sequence>
+            <element name="battery_capacity" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="os" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="memory_rom" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="system_memory" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="cpu" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="display_inches" type="string" minOccurs="1" maxOccurs="1"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Refrigerator">
+        <sequence>
+            <element name="power_consumption" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="weight" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="freezer_capacity" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="overall_capacity" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="height" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="width" type="string" minOccurs="1" maxOccurs="1"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="VacuumCleaner">
+        <sequence>
+            <element name="power_consumption" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="filter_type" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="bag_type" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="wand_type" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="motor_speed_regulation" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="cleaning_width" type="string" minOccurs="1" maxOccurs="1"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="TabletPC">
+        <sequence>
+            <element name="battery_capacity" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="display_inches" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="memory_rom" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="flash_memory_capacity" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="color" type="string" minOccurs="1" maxOccurs="1"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Speakers">
+        <sequence>
+            <element name="power_consumption" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="number_of_speakers" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="frequency_range" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="cord_length" type="string" minOccurs="1" maxOccurs="1"/>
+        </sequence>
+    </complexType>
+</schema>

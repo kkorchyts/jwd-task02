@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:appliances xmlns:tns="http://www.task01.tc.by">
+    <oven>
+        <power_consumption>1000</power_consumption>
+        <weight>10</weight>
+        <capacity>32</capacity>
+        <depth>45</depth>
+        <height>45.5</height>
+        <width>59.5</width>
+    </oven>
+
+    <oven>
+        <power_consumption>1500</power_consumption>
+        <weight>12</weight>
+        <capacity>33</capacity>
+        <depth>60</depth>
+        <height>45</height>
+        <width>68</width>
+    </oven>
+
+    <oven>
+        <power_consumption>2000</power_consumption>
+        <weight>11</weight>
+        <capacity>33</capacity>
+        <depth>60</depth>
+        <height>40</height>
+        <width>70</width>
+    </oven>
+</tns:appliances>
