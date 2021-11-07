@@ -46,5 +46,3 @@ public class ApplianceServiceImpl implements ApplianceService {
 
     }
 }
-
-//you may add your own new classes

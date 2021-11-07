@@ -22,7 +22,6 @@ public class Criteria {
         criteria.put(searchCriteria, value);
     }
 
-    // you may add your own code here
     public List<String> searchCriteries() {
         return new ArrayList<>(criteria.keySet());
     }

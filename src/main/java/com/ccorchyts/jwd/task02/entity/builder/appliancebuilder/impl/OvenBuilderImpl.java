@@ -1,6 +1,7 @@
 package com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.impl;
 
 import com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.ApplianceBuilder;
+import com.ccorchyts.jwd.task02.entity.builder.property.ApplianceFields;
 import com.ccorchyts.jwd.task02.entity.impl.Oven;
 import com.ccorchyts.jwd.task02.util.numberparsing.ValueParser;
 
@@ -55,25 +56,27 @@ public final class OvenBuilderImpl implements ApplianceBuilder<Oven> {
     @Override
     public OvenBuilderImpl properties(Map<String, Object> properties) {
         for (Map.Entry<String, Object> entry : properties.entrySet()) {
-            switch (entry.getKey()) {
-                case "POWER_CONSUMPTION":
+            switch (ApplianceFields.Oven.valueOf(entry.getKey())) {
+                case POWER_CONSUMPTION:
                     powerConsumption = ValueParser.parseInteger(String.valueOf(entry.getValue()));
                     break;
-                case "WEIGHT":
+                case WEIGHT:
                     weight = ValueParser.parseInteger(String.valueOf(entry.getValue()));
                     break;
-                case "CAPACITY":
+                case CAPACITY:
                     capacity = ValueParser.parseInteger(String.valueOf(entry.getValue()));
                     break;
-                case "DEPTH":
+                case DEPTH:
                     depth = ValueParser.parseFloat(String.valueOf(entry.getValue()));
                     break;
-                case "HEIGHT":
+                case HEIGHT:
                     height = ValueParser.parseFloat(String.valueOf(entry.getValue()));
                     break;
-                case "WIDTH":
+                case WIDTH:
                     width = ValueParser.parseFloat(String.valueOf(entry.getValue()));
                     break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + ApplianceFields.Oven.valueOf(entry.getKey()));
             }
         }
         return this;

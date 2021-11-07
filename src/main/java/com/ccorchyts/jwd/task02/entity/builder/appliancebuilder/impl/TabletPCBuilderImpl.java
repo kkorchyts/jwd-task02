@@ -1,6 +1,7 @@
 package com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.impl;
 
 import com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.ApplianceBuilder;
+import com.ccorchyts.jwd.task02.entity.builder.property.ApplianceFields;
 import com.ccorchyts.jwd.task02.entity.impl.TabletPC;
 import com.ccorchyts.jwd.task02.util.numberparsing.ValueParser;
 
@@ -48,22 +49,24 @@ public final class TabletPCBuilderImpl implements ApplianceBuilder<TabletPC> {
     @Override
     public TabletPCBuilderImpl properties(Map<String, Object> properties) {
         for (Map.Entry<String, Object> entry : properties.entrySet()) {
-            switch (entry.getKey()) {
-                case "BATTERY_CAPACITY":
+            switch (ApplianceFields.TabletPC.valueOf(entry.getKey())) {
+                case BATTERY_CAPACITY:
                     batteryCapacity = ValueParser.parseInteger(String.valueOf(entry.getValue()));
                     break;
-                case "DISPLAY_INCHES":
+                case DISPLAY_INCHES:
                     displayInches = String.valueOf(entry.getValue());
                     break;
-                case "MEMORY_ROM":
+                case MEMORY_ROM:
                     memoryRom = ValueParser.parseInteger(String.valueOf(entry.getValue()));
                     break;
-                case "FLASH_MEMORY_CAPACITY":
+                case FLASH_MEMORY_CAPACITY:
                     flashMemoryCapacity = ValueParser.parseInteger(String.valueOf(entry.getValue()));
                     break;
-                case "COLOR":
+                case COLOR:
                     color = String.valueOf(entry.getValue());
                     break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + ApplianceFields.TabletPC.valueOf(entry.getKey()));
             }
         }
         return this;

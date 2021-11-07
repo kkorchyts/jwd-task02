@@ -25,7 +25,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
+import static com.ccorchyts.jwd.task02.util.xmlparsing.Constant.APPLIANCE_NAMESPACE_URI;
+import static com.ccorchyts.jwd.task02.util.xmlparsing.Constant.APPLIANCE_QUALIFIES_NAME;
+
 public class ApplianceCatalogXMLWriterImpl implements ApplianceCatalogXMLWriter {
+
     private Document getDocumentFromFile(File file) throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
@@ -64,7 +68,7 @@ public class ApplianceCatalogXMLWriterImpl implements ApplianceCatalogXMLWriter 
     public void saveCatalogIntoXMLCatalog(File file, List<Appliance> appliances) {
         try {
             Document document = createEmptyDocument();
-            Element root = document.createElementNS("http://www.task01.tc.by", "tns:appliances");
+            Element root = document.createElementNS(APPLIANCE_NAMESPACE_URI, APPLIANCE_QUALIFIES_NAME);
             for (Appliance appliance : appliances) {
                 addSingleChildToEnd(root, appliance);
             }

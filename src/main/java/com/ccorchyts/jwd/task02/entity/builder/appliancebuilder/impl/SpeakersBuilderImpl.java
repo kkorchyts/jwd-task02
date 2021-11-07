@@ -1,6 +1,7 @@
 package com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.impl;
 
 import com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.ApplianceBuilder;
+import com.ccorchyts.jwd.task02.entity.builder.property.ApplianceFields;
 import com.ccorchyts.jwd.task02.entity.impl.Speakers;
 import com.ccorchyts.jwd.task02.util.numberparsing.ValueParser;
 
@@ -42,19 +43,21 @@ public final class SpeakersBuilderImpl implements ApplianceBuilder<Speakers> {
     @Override
     public SpeakersBuilderImpl properties(Map<String, Object> properties) {
         for (Map.Entry<String, Object> entry : properties.entrySet()) {
-            switch (entry.getKey()) {
-                case "POWER_CONSUMPTION":
+            switch (ApplianceFields.Speakers.valueOf(entry.getKey())) {
+                case POWER_CONSUMPTION:
                     powerConsumption = ValueParser.parseInteger(String.valueOf(entry.getValue()));
                     break;
-                case "NUMBER_OF_SPEAKERS":
+                case NUMBER_OF_SPEAKERS:
                     numberOfSpeakers = ValueParser.parseInteger(String.valueOf(entry.getValue()));
                     break;
-                case "FREQUENCY_RANGE":
+                case FREQUENCY_RANGE:
                     frequencyRange = String.valueOf(entry.getValue());
                     break;
-                case "CORD_LENGTH":
+                case CORD_LENGTH:
                     cordLength = ValueParser.parseFloat(String.valueOf(entry.getValue()));
                     break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + ApplianceFields.Speakers.valueOf(entry.getKey()));
             }
         }
         return this;

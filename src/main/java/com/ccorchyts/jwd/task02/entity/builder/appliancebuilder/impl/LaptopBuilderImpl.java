@@ -1,6 +1,7 @@
 package com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.impl;
 
 import com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.ApplianceBuilder;
+import com.ccorchyts.jwd.task02.entity.builder.property.ApplianceFields;
 import com.ccorchyts.jwd.task02.entity.impl.Laptop;
 import com.ccorchyts.jwd.task02.util.numberparsing.ValueParser;
 
@@ -54,25 +55,27 @@ public final class LaptopBuilderImpl implements ApplianceBuilder<Laptop> {
     @Override
     public LaptopBuilderImpl properties(Map<String, Object> properties) {
         for (Map.Entry<String, Object> entry : properties.entrySet()) {
-            switch (entry.getKey()) {
-                case "BATTERY_CAPACITY":
+            switch (ApplianceFields.Laptop.valueOf(entry.getKey())) {
+                case BATTERY_CAPACITY:
                     batteryCapacity = ValueParser.parseFloat(String.valueOf(entry.getValue()));
                     break;
-                case "OS":
+                case OS:
                     operationSystem = String.valueOf(entry.getValue());
                     break;
-                case "MEMORY_ROM":
+                case MEMORY_ROM:
                     memoryRom = ValueParser.parseInteger(String.valueOf(entry.getValue()));
                     break;
-                case "SYSTEM_MEMORY":
+                case SYSTEM_MEMORY:
                     systemMemory = ValueParser.parseInteger(String.valueOf(entry.getValue()));
                     break;
-                case "CPU":
+                case CPU:
                     cpu = String.valueOf(entry.getValue());
                     break;
-                case "DISPLAY_INCHS":
+                case DISPLAY_INCHS:
                     displayInchs = ValueParser.parseFloat(String.valueOf(entry.getValue()));
                     break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + ApplianceFields.Laptop.valueOf(entry.getKey()));
             }
         }
         return this;

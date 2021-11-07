@@ -1,6 +1,7 @@
 package com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.impl;
 
 import com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.ApplianceBuilder;
+import com.ccorchyts.jwd.task02.entity.builder.property.ApplianceFields;
 import com.ccorchyts.jwd.task02.entity.impl.VacuumCleaner;
 import com.ccorchyts.jwd.task02.util.numberparsing.ValueParser;
 
@@ -51,29 +52,30 @@ public final class VacuumCleanerBuilderImpl implements ApplianceBuilder<VacuumCl
         return this;
     }
 
-
     @Override
     public VacuumCleanerBuilderImpl properties(Map<String, Object> properties) {
         for (Map.Entry<String, Object> entry : properties.entrySet()) {
-            switch (entry.getKey()) {
-                case "POWER_CONSUMPTION":
+            switch (ApplianceFields.VacuumCleaner.valueOf(entry.getKey())) {
+                case POWER_CONSUMPTION:
                     powerConsumption = ValueParser.parseInteger(String.valueOf(entry.getValue()));
                     break;
-                case "FILTER_TYPE":
+                case FILTER_TYPE:
                     filterType = String.valueOf(entry.getValue());
                     break;
-                case "BAG_TYPE":
+                case BAG_TYPE:
                     bagType = String.valueOf(entry.getValue());
                     break;
-                case "WAND_TYPE":
+                case WAND_TYPE:
                     wandType = String.valueOf(entry.getValue());
                     break;
-                case "MOTOR_SPEED_REGULATION":
+                case MOTOR_SPEED_REGULATION:
                     motorSpeedRegulation = ValueParser.parseInteger(String.valueOf(entry.getValue()));
                     break;
-                case "CLEANING_WIDTH":
+                case CLEANING_WIDTH:
                     cleaningWidth = ValueParser.parseInteger(String.valueOf(entry.getValue()));
                     break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + ApplianceFields.VacuumCleaner.valueOf(entry.getKey()));
             }
         }
         return this;
