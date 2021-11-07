@@ -1,8 +1,8 @@
 package com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.impl;
 
-import com.ccorchyts.jwd.task02.entity.VacuumCleaner;
 import com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.ApplianceBuilder;
-import com.ccorchyts.jwd.task02.entity.factory.ValueParser;
+import com.ccorchyts.jwd.task02.entity.impl.VacuumCleaner;
+import com.ccorchyts.jwd.task02.util.numberparsing.ValueParser;
 
 import java.util.Map;
 

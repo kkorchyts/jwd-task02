@@ -4,5 +4,6 @@ import java.util.Map;
 
 public interface ApplianceBuilder<E> {
     ApplianceBuilder<E> properties(Map<String, Object> properties);
+
     E build();
 }

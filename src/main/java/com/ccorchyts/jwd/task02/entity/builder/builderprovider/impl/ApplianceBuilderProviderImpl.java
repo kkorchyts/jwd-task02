@@ -1,12 +1,6 @@
 package com.ccorchyts.jwd.task02.entity.builder.builderprovider.impl;
 
 import com.ccorchyts.jwd.task02.entity.Appliance;
-import com.ccorchyts.jwd.task02.entity.Laptop;
-import com.ccorchyts.jwd.task02.entity.Oven;
-import com.ccorchyts.jwd.task02.entity.Refrigerator;
-import com.ccorchyts.jwd.task02.entity.Speakers;
-import com.ccorchyts.jwd.task02.entity.TabletPC;
-import com.ccorchyts.jwd.task02.entity.VacuumCleaner;
 import com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.ApplianceBuilder;
 import com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.impl.LaptopBuilderImpl;
 import com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.impl.OvenBuilderImpl;
@@ -15,6 +9,12 @@ import com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.impl.SpeakersBui
 import com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.impl.TabletPCBuilderImpl;
 import com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.impl.VacuumCleanerBuilderImpl;
 import com.ccorchyts.jwd.task02.entity.builder.builderprovider.ApplianceBuilderProvider;
+import com.ccorchyts.jwd.task02.entity.impl.Laptop;
+import com.ccorchyts.jwd.task02.entity.impl.Oven;
+import com.ccorchyts.jwd.task02.entity.impl.Refrigerator;
+import com.ccorchyts.jwd.task02.entity.impl.Speakers;
+import com.ccorchyts.jwd.task02.entity.impl.TabletPC;
+import com.ccorchyts.jwd.task02.entity.impl.VacuumCleaner;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
@@ -22,14 +22,16 @@ import java.util.Map;
 
 public final class ApplianceBuilderProviderImpl implements ApplianceBuilderProvider {
     private final static ApplianceBuilderProviderImpl INSTANCE = new ApplianceBuilderProviderImpl();
-    private ApplianceBuilderProviderImpl(){
+
+    private ApplianceBuilderProviderImpl() {
     }
 
-    public static ApplianceBuilderProvider getInstance(){
+    public static ApplianceBuilderProvider getInstance() {
         return INSTANCE;
     }
 
     Map<String, Class<? extends ApplianceBuilder<? extends Appliance>>> builderMap = new HashMap<>();
+
     {
         builderMap.put(Laptop.class.getSimpleName().toLowerCase(), LaptopBuilderImpl.class);
         builderMap.put(Oven.class.getSimpleName().toLowerCase(), OvenBuilderImpl.class);

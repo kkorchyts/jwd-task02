@@ -7,27 +7,27 @@ import java.util.Map;
 
 public class Criteria {
 
-	private final String groupSearchName;
-	private final Map<String, Object> criteria = new HashMap<String, Object>();
+    private final String groupSearchName;
+    private final Map<String, Object> criteria = new HashMap<String, Object>();
 
-	public Criteria(String groupSearchName) {
-		this.groupSearchName = groupSearchName;
-	}
-	
-	public String getGroupSearchName() {
-		return groupSearchName;
-	}
+    public Criteria(String groupSearchName) {
+        this.groupSearchName = groupSearchName;
+    }
 
-	public void add(String searchCriteria, Object value) {
-		criteria.put(searchCriteria, value);
-	}
+    public String getGroupSearchName() {
+        return groupSearchName;
+    }
 
-	// you may add your own code here
-	public List<String> searchCriteries() {
-		return new ArrayList<>(criteria.keySet());
-	}
+    public void add(String searchCriteria, Object value) {
+        criteria.put(searchCriteria, value);
+    }
 
-	public Object getValue(String searchCriteria) {
-		return criteria.get(searchCriteria);
-	}
+    // you may add your own code here
+    public List<String> searchCriteries() {
+        return new ArrayList<>(criteria.keySet());
+    }
+
+    public Object getValue(String searchCriteria) {
+        return criteria.get(searchCriteria);
+    }
 }

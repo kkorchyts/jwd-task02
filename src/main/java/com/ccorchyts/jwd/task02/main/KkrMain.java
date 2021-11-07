@@ -1,10 +1,8 @@
 package com.ccorchyts.jwd.task02.main;
 
-import com.ccorchyts.jwd.task02.dao.impl.ApplianceDAOImpl;
 import com.ccorchyts.jwd.task02.entity.Appliance;
-import com.ccorchyts.jwd.task02.entity.criteria.SearchCriteria;
-import com.ccorchyts.jwd.task02.dao.ApplianceDAO;
 import com.ccorchyts.jwd.task02.entity.criteria.Criteria;
+import com.ccorchyts.jwd.task02.entity.criteria.SearchCriteria;
 import com.ccorchyts.jwd.task02.service.ApplianceService;
 import com.ccorchyts.jwd.task02.service.impl.ApplianceServiceImpl;
 

@@ -1,12 +1,12 @@
 package com.ccorchyts.jwd.task02.service.validation;
 
 import com.ccorchyts.jwd.task02.entity.Appliance;
-import com.ccorchyts.jwd.task02.entity.Laptop;
-import com.ccorchyts.jwd.task02.entity.Oven;
-import com.ccorchyts.jwd.task02.entity.Refrigerator;
-import com.ccorchyts.jwd.task02.entity.Speakers;
-import com.ccorchyts.jwd.task02.entity.TabletPC;
-import com.ccorchyts.jwd.task02.entity.VacuumCleaner;
+import com.ccorchyts.jwd.task02.entity.impl.Laptop;
+import com.ccorchyts.jwd.task02.entity.impl.Oven;
+import com.ccorchyts.jwd.task02.entity.impl.Refrigerator;
+import com.ccorchyts.jwd.task02.entity.impl.Speakers;
+import com.ccorchyts.jwd.task02.entity.impl.TabletPC;
+import com.ccorchyts.jwd.task02.entity.impl.VacuumCleaner;
 import com.ccorchyts.jwd.task02.service.validation.impl.LaptopCriteriaValidator;
 import com.ccorchyts.jwd.task02.service.validation.impl.OvenCriteriaValidator;
 import com.ccorchyts.jwd.task02.service.validation.impl.RefrigeratorCriteriaValidator;

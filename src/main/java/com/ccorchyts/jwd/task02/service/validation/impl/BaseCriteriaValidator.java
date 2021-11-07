@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.function.Predicate;
 
 public class BaseCriteriaValidator implements CriteriaValidator {
-    protected Map<String, Predicate<Object>> parameterValidators  = new HashMap<>();
+    protected Map<String, Predicate<Object>> parameterValidators = new HashMap<>();
 
     @Override
     public Boolean validate(Criteria criteria) {

@@ -1,8 +1,8 @@
 package com.ccorchyts.jwd.task02.service.validation.impl;
 
 import com.ccorchyts.jwd.task02.entity.criteria.SearchCriteria;
-import com.ccorchyts.jwd.task02.entity.factory.ValueParser;
 import com.ccorchyts.jwd.task02.service.validation.CriteriaValidator;
+import com.ccorchyts.jwd.task02.util.numberparsing.ValueParser;
 
 public class RefrigeratorCriteriaValidator extends BaseCriteriaValidator implements CriteriaValidator {
 

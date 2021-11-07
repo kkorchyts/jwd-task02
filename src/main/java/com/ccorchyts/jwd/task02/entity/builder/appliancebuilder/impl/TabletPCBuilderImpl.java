@@ -1,8 +1,8 @@
 package com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.impl;
 
-import com.ccorchyts.jwd.task02.entity.TabletPC;
 import com.ccorchyts.jwd.task02.entity.builder.appliancebuilder.ApplianceBuilder;
-import com.ccorchyts.jwd.task02.entity.factory.ValueParser;
+import com.ccorchyts.jwd.task02.entity.impl.TabletPC;
+import com.ccorchyts.jwd.task02.util.numberparsing.ValueParser;
 
 import java.util.Map;
 

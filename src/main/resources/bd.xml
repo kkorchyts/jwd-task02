@@ -14,7 +14,7 @@
         <weight>12</weight>
         <capacity>33</capacity>
         <depth>60</depth>
-        <height>45</height>
+        <height>200</height>
         <width>68</width>
     </oven>
 
@@ -22,8 +22,8 @@
         <power_consumption>2000</power_consumption>
         <weight>11</weight>
         <capacity>33</capacity>
-        <depth>60</depth>
-        <height>40</height>
+        <depth>300</depth>
+        <height>200</height>
         <width>70</width>
     </oven>
 </tns:appliances>

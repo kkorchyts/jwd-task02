@@ -3,16 +3,16 @@
         targetNamespace="http://www.task01.tc.by"
         xmlns:tns="http://www.task01.tc.by">
     <element name="appliances">
-            <complexType>
-                <sequence>
-                    <element name="oven" type= "tns:Oven" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="laptop" type= "tns:Laptop" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="refrigerator" type= "tns:Refrigerator" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="vacuumCleaner" type= "tns:VacuumCleaner" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="tabletPC" type= "tns:TabletPC" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="speakers" type= "tns:Speakers" minOccurs="0" maxOccurs="unbounded"/>
-                </sequence>
-            </complexType>
+        <complexType>
+            <sequence>
+                <element name="oven" type="tns:Oven" minOccurs="0" maxOccurs="unbounded"/>
+                <element name="laptop" type="tns:Laptop" minOccurs="0" maxOccurs="unbounded"/>
+                <element name="refrigerator" type="tns:Refrigerator" minOccurs="0" maxOccurs="unbounded"/>
+                <element name="vacuumCleaner" type="tns:VacuumCleaner" minOccurs="0" maxOccurs="unbounded"/>
+                <element name="tabletPC" type="tns:TabletPC" minOccurs="0" maxOccurs="unbounded"/>
+                <element name="speakers" type="tns:Speakers" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
     </element>
 
     <complexType name="Oven">
