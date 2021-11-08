@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="http://www.task01.tc.by"
+        targetNamespace="http://www.task02.jwd.kkorchyts.com"
         xmlns:tns="http://www.task01.tc.by">
     <element name="appliances">
         <complexType>

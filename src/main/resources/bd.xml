@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:appliances xmlns:tns="http://www.task01.tc.by">
+<tns:appliances xmlns:tns="http://www.task02.jwd.kkorchyts.com">
     <oven>
         <power_consumption>1000</power_consumption>
         <weight>10</weight>
